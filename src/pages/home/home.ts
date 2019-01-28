@@ -6,6 +6,8 @@ import { AddItemPage } from '../add-item/add-item';
 import { DataProvider } from '../../providers/data/data';
 
 
+declare let appService: any;
+
 //import Wallet;
 
 @Component({
@@ -67,5 +69,13 @@ export class HomePage {
 
    viewItem(){
    }
+   
+  backHome() {
+    appService.launcher();
+  }
+
+  closeApp() {
+    appService.close();
+  }
 
 }
